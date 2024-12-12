@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin:["https://topinv.vercel.app/"],
     methods:["POST","GET"],
+    credentials:true
     }));
 
 const productsRoute = require('./routes/productsRoute');
