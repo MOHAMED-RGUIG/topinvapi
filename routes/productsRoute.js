@@ -26,10 +26,11 @@ router.get('/getallproducts', async (req, res) => {
     }
 });
 router.put('/updateproducts/:REFINV_0', async (req, res) => {
+
+    try {
     const { REFINV_0 } = req.params;
     const { ETATINV } = req.body;
   console.log('REFINV_0:', REFINV_0, 'ETATINV:', ETATINV);
-    try {
       const pool = await poolPromise2;
   
       const result = await pool
