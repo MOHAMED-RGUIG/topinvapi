@@ -37,7 +37,7 @@ router.put('/updateproducts/:REFINV_0', async (req, res) => {
         request.input('REFINV_0', sql.Int, REFINV_0)
          request.input('ETATINV', sql.NVarChar, ETATINV)
          await  request.query(`
-          UPDATE TCE.YLSTINV
+          UPDATE [topclass_sage].[TCE].[YLSTINV]
           SET ETATINV = @ETATINV
           WHERE REFINV_0 = @REFINV_0
         `);
