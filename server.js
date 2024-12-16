@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
     origin:["https://topinv.vercel.app"],
-    methods:["POST","GET"],
+    methods:["POST","GET","PUT"],
     credentials:true
     }));
 
