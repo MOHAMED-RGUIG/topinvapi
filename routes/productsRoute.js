@@ -52,9 +52,8 @@ router.put('/updateproducts/:REFINV_0', async (req, res) => {
         res.status(404).json({ success: false, message: 'Product not found' });
       }
     } catch (err) {
-      console.error('SQL error:', err.message);
-      //res.status(500).json({ error: 'Internal Server Error' });
-res.status(500).json({ error: err.message });    
+console.error('Full SQL Error:', err);
+res.status(500).json({ error: err });   
 }
   });
   
