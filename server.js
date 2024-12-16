@@ -24,8 +24,8 @@ const validinvRoute = require('./routes/validInvRoute');
 const getinvRoute = require('./routes/validInvRoute');
 const validInvInsertRoute = require('./routes/validInvRoute');
 const validInvCodetRoute = require('./routes/validInvRoute');
-const updateproducts = require('./routes/productsRoute');
-app.use('/api/products/', updateproducts);
+
+
 app.use('/api/validinv/', validInvCodetRoute);
 app.use('/api/validinv/', getinvRoute);
 app.use('/api/validinv/', validinvRoute);
