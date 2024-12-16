@@ -6,7 +6,7 @@ const { sql, poolPromise,poolPromise2 } = require('../db');
 router.post('/validInvInsert', async (req, res) => {
     let pool;
     try {
-        const { currentUser, REFINV_0, itmref, rows } = req.body;
+        const { currentUser, REFINV_0, ITMREF_0, rows } = req.body;
 
         // Vérifiez que les données nécessaires sont présentes
         if (!REFINV_0 || !ITMREF_0 || !rows || rows.length === 0 || !currentUser.ID) {
@@ -21,7 +21,7 @@ router.post('/validInvInsert', async (req, res) => {
             
             // Bind parameters for the current row
             request.input('REFINV_0', sql.NVarChar(), REFINV_0);
-            request.input('ITMREF_0', sql.NVarChar(), itmref);
+            request.input('ITMREF_0', sql.NVarChar(), ITMREF_0);
             request.input('LOT_0', sql.NVarChar(), row.LOT_0);
             request.input('STOFCY_0', sql.NVarChar(), row.STOFCY_0);
             request.input('QTYINV_0', sql.Int, row.Qt);
